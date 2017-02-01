@@ -1,0 +1,82 @@
+/*
+ * Copyright (c) 2014 GE Global Research. All rights reserved.
+ *
+ * The copyright to the computer software herein is the property of
+ * GE Global Research. The software may be used and/or copied only
+ * with the written permission of GE Global Research or in accordance
+ * with the terms and conditions stipulated in the agreement/contract
+ * under which the software has been supplied.
+ */
+
+//
+// Sass for the "sketch" notion of the ref-digital-meter component
+//
+// @author
+//
+
+/*
+THIS FILE SHOULD CONTAIN ONLY ABSTRACT/'SKETCH' THEME RULES, NOT SPECIFIC TO PREDIX BRANDING
+Predix branding rules go in ref-digital-meter-predix.scss, not in this file.
+*/
+
+
+
+// Generic
+@import "px-normalize-design/_generic.normalize.scss";
+@import "px-box-sizing-design/_generic.box-sizing.scss";
+@import "px-helpers-design/_generic.helpers.scss";
+
+// Base
+@import "px-flexbox-design/_base.flexbox.scss";
+@import "px-viewport-design/_base.viewport.scss";
+@import "px-typography-design/_base.typography.scss";
+
+
+
+// Component
+.digital-meter {
+  width: 100%;
+  //padding: 10px;
+  height: 100%;
+}
+.bar-empty {
+  float: left;
+  background-color: $gray6;
+  margin: 0 2px 0 1px;
+  min-width: 5px;
+  height: 100%;
+  position: relative;
+}
+
+.bar-fill {
+  margin: 0;
+  min-width: 5px;
+  position: absolute;
+  bottom: 0;
+
+  max-height: 0;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.bar-green {
+  background-color: $green-light;
+  max-height: 999px;
+}
+.bar-yellow {
+  background-color: $yellow;
+  max-height: 999px;
+}
+.bar-red {
+  background-color: $red;
+  max-height: 999px;
+}
+
+
+// Trumps
+@import "inuit-clearfix/_trumps.clearfix.scss";
+@import "px-spacing-responsive-design/_trumps.spacing-responsive.scss";
+@import "px-widths-responsive-design/_trumps.widths-responsive.scss";
